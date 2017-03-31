@@ -183,7 +183,7 @@ void StudentLinkList::printAllStudents() {
             cout<<"Student Name: "<<traversePointer->getStudentName()<<"\n";
             cout<<"Student Roll No: "<<traversePointer->getStrudentTollNo()<<"\n";
             traversePointer = traversePointer->getNext();
-        }while(traversePointer != nullptr);
+        }while(traversePointer != this->head);
     }
     
 }
