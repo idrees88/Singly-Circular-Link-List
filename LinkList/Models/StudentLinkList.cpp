@@ -110,8 +110,14 @@ void StudentLinkList::removeStudentAtPosition(int position) {
     
     do {
         if (count == position && count == 0) {
+            StudentData *lastNode = this->head;
+            while (lastNode->getNext() != this->head) {
+                lastNode = lastNode->getNext();
+            }
             this->head = traversePointer->getNext();
             delete traversePointer;
+            traversePointer = nullptr;
+            lastNode->setNext(this->head);
             this->size--;
             return;
         }
@@ -126,7 +132,7 @@ void StudentLinkList::removeStudentAtPosition(int position) {
         traversePointer = traversePointer->getNext();
         count++;
         
-    }while(traversePointer->getNext() != nullptr);
+    }while(traversePointer->getNext() != this->head);
     
     cout<<"removeStudentAtPosition/Error: Remove unsuccessful";
 }
