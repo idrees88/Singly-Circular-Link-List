@@ -170,6 +170,7 @@ void StudentLinkList::removeAll() {
     while (this->head != nullptr) {
         this->head = this->head->getNext();
         delete traversePointer;
+        traversePointer = nullptr;
         traversePointer = this->head;
         this->size--;
     }
