@@ -28,6 +28,10 @@ int main(int argc, const char * argv[]) {
     
     studentList->printAllStudents();
     
+    //studentList->removeAll();
+    
+    //studentList->printAllStudents();
+    
     
     return 0;
 }

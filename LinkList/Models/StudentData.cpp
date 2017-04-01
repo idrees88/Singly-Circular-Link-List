@@ -44,6 +44,10 @@ StudentData* StudentData::getNext() {
     return this->next;
 }
 
+StudentData::~StudentData() {
+    this->next = nullptr;
+}
+
 
 
 

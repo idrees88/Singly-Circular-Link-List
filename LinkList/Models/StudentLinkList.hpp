@@ -25,6 +25,7 @@ public:
     void removeLastStudent();
     void removeAll();
     void printAllStudents();
+    ~StudentLinkList();
 };
 
 
