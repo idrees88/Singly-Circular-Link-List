@@ -29,6 +29,7 @@ public:
     string getStudentName();
     string getStrudentTollNo();
     StudentData* getNext();
+    ~StudentData();
 };
 
 #endif /* StudentData_hpp */
